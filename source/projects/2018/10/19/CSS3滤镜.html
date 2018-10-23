@@ -1,0 +1,57 @@
+<article>
+    <img src="./demo.jpeg" alt="">
+    <nav>
+        <ol>
+            <li>
+                <label for="blur">高斯模糊：&nbsp;</label>
+                <input type="range" id="blur" max="10" min="0" value="0">
+            </li>
+            <li>
+                <label for="brightness">线性乘法：&nbsp;</label>
+                <input type="range" id="brightness" max="100" min="0" value="0">
+            </li>
+            <li>
+                <label for="contrast">转对比度：&nbsp;</label>
+                <input type="range" id="contrast" max="100" min="0" value="0">
+            </li>
+            <li>
+                <label for="hue-rotate">色相旋转：&nbsp;</label>
+                <input type="range" id="hue-rotate" max="360" min="0" value="0">
+            </li>
+            <li>
+                <label for="invert">图像反转：&nbsp;</label>
+                <input type="range" id="invert" max="100" min="0" value="0">
+            </li>
+            <li>
+                <label for="grayscale">图像灰度：&nbsp;</label>
+                <input type="range" id="grayscale" max="100" min="0" value="0">
+            </li>
+            <li>
+                <label for="sepia">转深褐色：&nbsp;</label>
+                <input type="range" id="sepia" max="100" min="0" value="0">
+            </li>
+            <li>
+                <label for="sepia">颜色通道：&nbsp;</label>
+                <button id="URL">使用URL实现强对比度</button>
+            </li>
+        </ol>
+    </nav>
+    <ul>
+        <svg height="0" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="change">
+                        <feColorMatrix type="matrix" values="
+                        3 -1 -1 0 0
+                        -1 3 -1 0 0
+                        -1 -1 3 0 0
+                        0 0 0 1 0" />
+                </filter>
+            </defs>
+        </svg>
+    </ul>
+    <aside>参考文档： [利用CSS改变图片颜色的100种方法](https://mp.weixin.qq.com/s/_8vpfui02sW7DFG-1TXnsw)</aside>
+</article>
+<link rel="stylesheet" href="./demo.css">
+
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="./demo.js"></script>
