@@ -1,0 +1,11 @@
+.top-btn {
+    text-align: center;
+    background-color: #8dc19f;
+    margin-bottom: 20px;
+    height: 400px;
+}
+.fix-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+}

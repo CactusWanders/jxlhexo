@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="响应式网页设计(RWD，Responsive Web Design)这个术语，由伊桑·马科特(Ethan Marcotte)提出。他在 A List Apart 发表了一篇开创性的文章，将三种已有的开发技巧(弹 性网格布局、弹性图片、媒体和媒体查询)整合起来，并命名为响应式网页设计。这个 术语还有一堆表示相同意思的其他叫法，如流式设计、弹性布局、塑料布局、流体设计、 自适应布局、跨设备设计以及">
+<meta property="og:type" content="article">
+<meta property="og:title" content="响应式布局">
+<meta property="og:url" content="http://yoursite.com/2018/08/03/响应式布局/index.html">
+<meta property="og:site_name" content="CactusWanders">
+<meta property="og:description" content="响应式网页设计(RWD，Responsive Web Design)这个术语，由伊桑·马科特(Ethan Marcotte)提出。他在 A List Apart 发表了一篇开创性的文章，将三种已有的开发技巧(弹 性网格布局、弹性图片、媒体和媒体查询)整合起来，并命名为响应式网页设计。这个 术语还有一堆表示相同意思的其他叫法，如流式设计、弹性布局、塑料布局、流体设计、 自适应布局、跨设备设计以及">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-17T09:02:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="响应式布局">
+<meta name="twitter:description" content="响应式网页设计(RWD，Responsive Web Design)这个术语，由伊桑·马科特(Ethan Marcotte)提出。他在 A List Apart 发表了一篇开创性的文章，将三种已有的开发技巧(弹 性网格布局、弹性图片、媒体和媒体查询)整合起来，并命名为响应式网页设计。这个 术语还有一堆表示相同意思的其他叫法，如流式设计、弹性布局、塑料布局、流体设计、 自适应布局、跨设备设计以及">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>响应式布局</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/08/01/LESS从学习到入门/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/08/03/响应式布局/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/08/03/响应式布局/&text=响应式布局"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/08/03/响应式布局/&title=响应式布局"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/08/03/响应式布局/&is_video=false&description=响应式布局"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=响应式布局&body=Check out this article: http://yoursite.com/2018/08/03/响应式布局/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/08/03/响应式布局/&title=响应式布局"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/08/03/响应式布局/&title=响应式布局"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/08/03/响应式布局/&title=响应式布局"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/08/03/响应式布局/&title=响应式布局"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/08/03/响应式布局/&name=响应式布局&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#响应式布局的选择"><span class="toc-number">1.</span> <span class="toc-text">响应式布局的选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自适应设计"><span class="toc-number">2.</span> <span class="toc-text">自适应设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流式布局"><span class="toc-number">3.</span> <span class="toc-text">流式布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#百分比布局"><span class="toc-number">3.1.</span> <span class="toc-text">百分比布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#em替换px"><span class="toc-number">3.2.</span> <span class="toc-text">em替换px</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-网格系统"><span class="toc-number">3.3.</span> <span class="toc-text">CSS 网格系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#弹性图片"><span class="toc-number">3.4.</span> <span class="toc-text">弹性图片</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5的使用"><span class="toc-number">4.</span> <span class="toc-text">HTML5的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5新特性"><span class="toc-number">5.</span> <span class="toc-text">HTML5新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新标签–结构元素"><span class="toc-number">5.1.</span> <span class="toc-text">新标签–结构元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新标签–行内元素"><span class="toc-number">5.2.</span> <span class="toc-text">新标签–行内元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视频或音频"><span class="toc-number">5.3.</span> <span class="toc-text">视频或音频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#离线Web-应用"><span class="toc-number">5.4.</span> <span class="toc-text">离线Web 应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表单"><span class="toc-number">5.5.</span> <span class="toc-text">表单</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3"><span class="toc-number">6.</span> <span class="toc-text">CSS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3-多栏布局-column-width，-column-count"><span class="toc-number">6.1.</span> <span class="toc-text">CSS3 多栏布局:column-width， column-count</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文字换行：-word-wrap-break-word"><span class="toc-number">6.2.</span> <span class="toc-text">文字换行： word-wrap: break-word;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性选择器：img-alt-”atwi-oscar”"><span class="toc-number">6.3.</span> <span class="toc-text">属性选择器：img[alt=”atwi_oscar”]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构伪类"><span class="toc-number">6.4.</span> <span class="toc-text">结构伪类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义网页字体-font-face"><span class="toc-number">6.5.</span> <span class="toc-text">自定义网页字体@font-face</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色格式和透明度：-RGB，HSL，-RGBA，HSLA"><span class="toc-number">6.6.</span> <span class="toc-text">颜色格式和透明度： RGB，HSL， RGBA，HSLA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3美化"><span class="toc-number">6.7.</span> <span class="toc-text">CSS3美化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过渡、变形和动画"><span class="toc-number">6.8.</span> <span class="toc-text">过渡、变形和动画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跨浏览器"><span class="toc-number">7.</span> <span class="toc-text">跨浏览器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档：《响应式Web设计-HTML5和CSS3实战》-2013年1月第1版"><span class="toc-number">8.</span> <span class="toc-text">参考文档：《响应式Web设计:HTML5和CSS3实战》 2013年1月第1版</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文中链接汇总："><span class="toc-number">9.</span> <span class="toc-text">文中链接汇总：</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        响应式布局
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">CactusWanders</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-08-03T01:35:52.000Z" itemprop="datePublished">2018-08-03</time>
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>  响应式网页设计(RWD，Responsive Web Design)这个术语，由伊桑·马科特(Ethan Marcotte)提出。他在 A List Apart 发表了一篇开创性的文章，将三种已有的开发技巧(弹 性网格布局、弹性图片、媒体和媒体查询)整合起来，并命名为响应式网页设计。这个 术语还有一堆表示相同意思的其他叫法，如流式设计、弹性布局、塑料布局、流体设计、 自适应布局、跨设备设计以及弹性设计。</p>
+<h2 id="响应式布局的选择"><a href="#响应式布局的选择" class="headerlink" title="响应式布局的选择"></a>响应式布局的选择</h2><p>  响应式设计的一个主要目标就是以最快的时间加载网页。HTML5强调简化标签，仅链接那些我们必须的CSS、JavaScript和图片文件。使用CSS3更浏览器友好的实现切图。由于一些浏览器的支持不好，可进行不同浏览器的不同设计，当然，做兼容也是可以的，只是需要的成本会比较大，量情况而定。</p>
+<h2 id="自适应设计"><a href="#自适应设计" class="headerlink" title="自适应设计"></a>自适应设计</h2><p>  针对已知的特定访问设备，页面捕捉到媒体查询设置的断点，然后布局发生变化</p>
+<p>  <a href="https://www.runoob.com/css3/css3-mediaqueries.html" target="_blank" rel="noopener">媒体查询</a> 是CSS3中的一个模块，根据设备显示器的视口宽度、屏幕比例、设备方向设定样式。<a href="https://www.runoob.com/cssref/css3-pr-mediaquery.html" target="_blank" rel="noopener">CSS3中媒体查询检测的属性</a> 很多，方便我们根据不同的设备设计不同的样式表。<br>  虽然浏览器会忽略与自身不匹配的样式文件，但是不一定不下载，所以单独写文件的意义不大，反而会增加HTTP请求。因此建议使用@media实现媒体查询。</p>
+<h2 id="流式布局"><a href="#流式布局" class="headerlink" title="流式布局"></a>流式布局</h2><h3 id="百分比布局"><a href="#百分比布局" class="headerlink" title="百分比布局"></a>百分比布局</h3><p>  在丹·锡德霍姆（Dan Cederholm）编写的《无懈可击的Web 设计》一书中，伊桑·马科特为其撰写了一章关于流动布局的内容。在书中，他提供了一个简易可行的公式，将固定像素宽度转换对应的百分比宽度：<br>          目标元素宽度 ÷ 上下文元素宽度 = 百分比宽度<br>  当百分比失效时，可以检查上下文。display inline-block无法展示宽度，可改成inline或指定上下文的宽度。</p>
+<h3 id="em替换px"><a href="#em替换px" class="headerlink" title="em替换px"></a>em替换px</h3><p>  em 是书面形式的大写字母“M”的简称，发音和M相同。以前，“M”常被用来测定某种字体的大小，因为它是英文字母中最大（最宽）的字母。如今，em 作为一个测量单位，指的是特定字母的宽度和高度相对于特定字体磅值的比例。<br>  em 的实际大小是相对于其上下文的字体大小而言的。</p>
+<h3 id="CSS-网格系统"><a href="#CSS-网格系统" class="headerlink" title="CSS 网格系统"></a>CSS 网格系统</h3><h3 id="弹性图片"><a href="#弹性图片" class="headerlink" title="弹性图片"></a>弹性图片</h3><p>  例子1：<a href="http://filamentgroup.com/lab/responsive_images_experi_menting_with_context_aware_image_sizing/" target="_blank" rel="noopener">Filament Group 的“响应式图片”</a>使用js，根据屏幕大小加载对应图片。<br>  例子2： <a href="http://adaptive-images.com" target="_blank" rel="noopener">Matt Wilcox 的“自适应图片”</a>JavaScript被禁用的情况下依然有效。未深究方法，需要服务器端配合，详情可见《响应式web设计:HTML5和CSS3实战》3.6 为不同的屏幕尺寸提供不同的图片</p>
+<h2 id="HTML5的使用"><a href="#HTML5的使用" class="headerlink" title="HTML5的使用"></a>HTML5的使用</h2><p>  腻子脚本和Modernizr<br>  老版本的IE（IE9 以前的版本）不识别H5 的新语义元素。但是Sjoerd Visscher 发现如果先使用JavaScript 创建这些元素，那IE就能识别。基于这一发现，<a href="http://remysharp.com/2009/01/07/html5-enabling-script/" target="_blank" rel="noopener">Remy Sharp 开发了一个轻量级的增强脚本</a>， 在HTML5 网页中引入该文件后，就能神奇地让老版本IE 支持新HTML 元素。<a href="http://www.modernizr.com" target="_blank" rel="noopener">Modernizr</a>除了能让IE 支持HTML5 新元素之外，它还能够基于一系列特性测试来有条件地加载更高级的腻子脚本（polyfill）、CSS 文件以及额外的JavaScript 文件。</p>
+<h2 id="HTML5新特性"><a href="#HTML5新特性" class="headerlink" title="HTML5新特性"></a>HTML5新特性</h2><h3 id="新标签–结构元素"><a href="#新标签–结构元素" class="headerlink" title="新标签–结构元素"></a>新标签–结构元素</h3><p>  <code>&lt;section&gt;</code>元素用来定义文档或应用程序中的区域（或节）<br>  <code>&lt;nav&gt;</code>元素用来定义文档的主导航区域，其中的链接指向其他页面或当前页面的某些区域。<br>  <code>&lt;article&gt;</code>元素用来包裹独立的内容片段。最明显的例子就是博客正文。注意，如果出现嵌套的<code>&lt;article&gt;</code>元素，那内层的<code>&lt;article&gt;</code>元素内容应该和外层文章内容直接有关。<br>  <code>&lt;aside&gt;</code>元素用来表示与页面主内容松散相关的内容。在实践中，我经常将其用作侧边栏（当它包含合适的内容时）。另外，引文、广告以及导航元素（如友情链接等）也可以使用它。<br>  <code>&lt;hgroup&gt;</code>元素用来包裹一组使用<code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code>、<code>&lt;h3&gt;</code>等标签的标题、标语和副标题。这样在HTML5 的大纲结构算法中就会隐藏次级标题元素，从而只让<code>&lt;hgroup&gt;</code>中的第一个标题元素进入文档大纲。<br>  <code>&lt;header&gt;</code>元素不计入大纲结构，所以不能用它来划分内容结构，而是应该用它来包含对区域内容的介绍说明。<br>  <code>&lt;footer&gt;</code>元素也不计入大纲结构，所以也不能用于划分内容结构。应该用它来包含其所在区域的辅助信息。<br>  <code>&lt;address&gt;</code>元素用于明确的标注离其最近的<code>&lt;article&gt;</code>或<code>&lt;body&gt;</code>祖先元素的联系信息。为避免产生混淆，请记住<code>&lt;address&gt;</code>中一般不放具体的邮政地址，除非相应内容确实需要联系地址。而邮政地址和其他可能会改变的联系信息应该使用<code>&lt;p&gt;</code>标签来包裹。</p>
+<h3 id="新标签–行内元素"><a href="#新标签–行内元素" class="headerlink" title="新标签–行内元素"></a>新标签–行内元素</h3><p>  <code>&lt;b&gt;</code>的定义是：一小段文本，纯粹为了吸引人的注意，除此之外不传达任何重要性，也不暗示其他语态或语气，如文档摘要中的关键词、评论中的产品名称、交互式文本软件中的可操作单词，或者文章的导语。<br>  <code>&lt;em&gt;</code>的语义是：强调内容中的重点。<br>  <code>&lt;i&gt;</code>的描述如下：一小段有不同语态或语气的文字，或者是样子上与普通文章有所差异以便标明不同特点的文字。</p>
+<h3 id="视频或音频"><a href="#视频或音频" class="headerlink" title="视频或音频"></a>视频或音频</h3><p>  <code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code>元素<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;video width=&quot;640&quot; height=&quot;480&quot; controls autoplay preload=&quot;auto&quot; loopposter=&quot;myVideoPoster.jpg&quot;&gt;</span><br><span class="line">    &lt;source src=&quot;video/myVideo.ogv&quot; type=&quot;video/ogg&quot;&gt;</span><br><span class="line">    &lt;source src=&quot;video/myVideo.mp4&quot; type=&quot;video/mp4&quot;&gt;</span><br><span class="line">    What, do you mean you don&apos;t understand HTML5?</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="离线Web-应用"><a href="#离线Web-应用" class="headerlink" title="离线Web 应用"></a>离线Web 应用</h3><h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><pre><code>placeholder：占位符文字
+required：表明该表单域为必填项
+autofocus：表单在加载完成时有一个表单域被默认聚焦
+autocomplete：使用浏览器默认的提供自动完成输入的功能
+list，datalist：输入框中开始输入值的时候，显示一组备选值
+input：新输入类型及属性
+</code></pre><h2 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h2><h3 id="CSS3-多栏布局-column-width，-column-count"><a href="#CSS3-多栏布局-column-width，-column-count" class="headerlink" title="CSS3 多栏布局:column-width， column-count"></a>CSS3 多栏布局:column-width， column-count</h3><h3 id="文字换行：-word-wrap-break-word"><a href="#文字换行：-word-wrap-break-word" class="headerlink" title="文字换行： word-wrap: break-word;"></a>文字换行： word-wrap: break-word;</h3><h3 id="属性选择器：img-alt-”atwi-oscar”"><a href="#属性选择器：img-alt-”atwi-oscar”" class="headerlink" title="属性选择器：img[alt=”atwi_oscar”]"></a>属性选择器：img[alt=”atwi_oscar”]</h3><pre><code>“匹配开头”Element[attribute^=&quot;value&quot;]
+“匹配包含内容”Element[attribute*=&quot;value&quot;]
+“匹配结尾”的属性选择器语法如下：Element[attribute$=&quot;value&quot;] 
+</code></pre><h3 id="结构伪类"><a href="#结构伪类" class="headerlink" title="结构伪类"></a>结构伪类</h3><p>  :last-child、:first-child、:nth-child(n)、:nth-last-child(n)、:nth-of-type(n)以及:nth-last-oftype(n)、:not<br>  伪元素的修正::first-line、::first-letter</p>
+<h3 id="自定义网页字体-font-face"><a href="#自定义网页字体-font-face" class="headerlink" title="自定义网页字体@font-face"></a>自定义网页字体@font-face</h3><h3 id="颜色格式和透明度：-RGB，HSL，-RGBA，HSLA"><a href="#颜色格式和透明度：-RGB，HSL，-RGBA，HSLA" class="headerlink" title="颜色格式和透明度： RGB，HSL， RGBA，HSLA"></a>颜色格式和透明度： RGB，HSL， RGBA，HSLA</h3><h3 id="CSS3美化"><a href="#CSS3美化" class="headerlink" title="CSS3美化"></a>CSS3美化</h3><p>  文字阴影：text-shadow<br>  盒阴影：box-shadow<br>  背景渐变：gradient</p>
+<h3 id="过渡、变形和动画"><a href="#过渡、变形和动画" class="headerlink" title="过渡、变形和动画"></a>过渡、变形和动画</h3><p>  过渡：transition<br>  2D 变形：transform<br>  动画效果：@keyframes+animation</p>
+<h2 id="跨浏览器"><a href="#跨浏览器" class="headerlink" title="跨浏览器"></a>跨浏览器</h2><p>  渐进增强与优雅降级<br>  优雅降级指的是为现代浏览器制作网站，老版本浏览器只提供基本可用的功能。<br>  渐进增强以恪守Web标准的标签为基础，在所有浏览器中均可用。然后通过CSS样式和必要的JavaScript来为更先进的浏览器提供渐进式的增强体验。</p>
+<h2 id="参考文档：《响应式Web设计-HTML5和CSS3实战》-2013年1月第1版"><a href="#参考文档：《响应式Web设计-HTML5和CSS3实战》-2013年1月第1版" class="headerlink" title="参考文档：《响应式Web设计:HTML5和CSS3实战》 2013年1月第1版"></a>参考文档：《响应式Web设计:HTML5和CSS3实战》 2013年1月第1版</h2><h2 id="文中链接汇总："><a href="#文中链接汇总：" class="headerlink" title="文中链接汇总："></a>文中链接汇总：</h2><p>Opera开发者社区与Aaron Gustafson的跨浏览器讨论：<br><code>http://dev.opera.com/articles/view/graceful-degradation-progressive-enhancement/</code><br><code>http://www.alistapart.com/articles/understandingprogressiveenhancement</code><br><a href="http://mediaqueri.es" target="_blank" rel="noopener">响应式网站推荐</a><br><a href="http://www.csszengarden.com" target="_blank" rel="noopener">CSS 禅意花园</a><br><a href="http://www.alistapart.com/articles/slidingdoors/" target="_blank" rel="noopener">CSS 2.1 滑动门技术实现圆角</a><br><a href="https://github.com/scottjehl/Respond" target="_blank" rel="noopener">IE8 及更低版本的媒体查询兼容Respond.js</a><br><a href="http://html5boilerplate.com" target="_blank" rel="noopener">HTML5样板文件</a><br><a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry" target="_blank" rel="noopener">HTML5语言列表</a><br><a href="http://dev.w3.org/html5/spec/Overview.html#non-conforming-features" target="_blank" rel="noopener">HTML5非保留废弃零件列表</a><br><a href="http://w3c.github.io/html" target="_blank" rel="noopener">HTML5标签解释</a><br><a href="http://www.w3.org/WAI/intro/aria" target="_blank" rel="noopener">无障碍网页应用技术</a><br>字体网站：<br>  <code>[Font Squirrel](www.fontsquirrel.com)</code><br>  <code>[Typekit](www.typekit.com)</code><br>  <code>[Font Deck](www.fontdeck.com)</code></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#响应式布局的选择"><span class="toc-number">1.</span> <span class="toc-text">响应式布局的选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自适应设计"><span class="toc-number">2.</span> <span class="toc-text">自适应设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#流式布局"><span class="toc-number">3.</span> <span class="toc-text">流式布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#百分比布局"><span class="toc-number">3.1.</span> <span class="toc-text">百分比布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#em替换px"><span class="toc-number">3.2.</span> <span class="toc-text">em替换px</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-网格系统"><span class="toc-number">3.3.</span> <span class="toc-text">CSS 网格系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#弹性图片"><span class="toc-number">3.4.</span> <span class="toc-text">弹性图片</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5的使用"><span class="toc-number">4.</span> <span class="toc-text">HTML5的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5新特性"><span class="toc-number">5.</span> <span class="toc-text">HTML5新特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新标签–结构元素"><span class="toc-number">5.1.</span> <span class="toc-text">新标签–结构元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新标签–行内元素"><span class="toc-number">5.2.</span> <span class="toc-text">新标签–行内元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视频或音频"><span class="toc-number">5.3.</span> <span class="toc-text">视频或音频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#离线Web-应用"><span class="toc-number">5.4.</span> <span class="toc-text">离线Web 应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表单"><span class="toc-number">5.5.</span> <span class="toc-text">表单</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3"><span class="toc-number">6.</span> <span class="toc-text">CSS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3-多栏布局-column-width，-column-count"><span class="toc-number">6.1.</span> <span class="toc-text">CSS3 多栏布局:column-width， column-count</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文字换行：-word-wrap-break-word"><span class="toc-number">6.2.</span> <span class="toc-text">文字换行： word-wrap: break-word;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性选择器：img-alt-”atwi-oscar”"><span class="toc-number">6.3.</span> <span class="toc-text">属性选择器：img[alt=”atwi_oscar”]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结构伪类"><span class="toc-number">6.4.</span> <span class="toc-text">结构伪类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义网页字体-font-face"><span class="toc-number">6.5.</span> <span class="toc-text">自定义网页字体@font-face</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色格式和透明度：-RGB，HSL，-RGBA，HSLA"><span class="toc-number">6.6.</span> <span class="toc-text">颜色格式和透明度： RGB，HSL， RGBA，HSLA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3美化"><span class="toc-number">6.7.</span> <span class="toc-text">CSS3美化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过渡、变形和动画"><span class="toc-number">6.8.</span> <span class="toc-text">过渡、变形和动画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#跨浏览器"><span class="toc-number">7.</span> <span class="toc-text">跨浏览器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档：《响应式Web设计-HTML5和CSS3实战》-2013年1月第1版"><span class="toc-number">8.</span> <span class="toc-text">参考文档：《响应式Web设计:HTML5和CSS3实战》 2013年1月第1版</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文中链接汇总："><span class="toc-number">9.</span> <span class="toc-text">文中链接汇总：</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2018/08/03/响应式布局/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2018/08/03/响应式布局/&text=响应式布局"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2018/08/03/响应式布局/&title=响应式布局"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2018/08/03/响应式布局/&is_video=false&description=响应式布局"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=响应式布局&body=Check out this article: http://yoursite.com/2018/08/03/响应式布局/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2018/08/03/响应式布局/&title=响应式布局"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2018/08/03/响应式布局/&title=响应式布局"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2018/08/03/响应式布局/&title=响应式布局"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2018/08/03/响应式布局/&title=响应式布局"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2018/08/03/响应式布局/&name=响应式布局&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 CactusWanders
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects/">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
