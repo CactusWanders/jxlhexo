@@ -2,7 +2,7 @@
  * @Description: 实现一个网页版的聊天室
  * .基本页面样式实现
  * .每次输入滚动到最下面
- * .获取网站数据作为回复  TODO
+ * .获取网站数据作为回复
  * .大量数据时如何控制DOM数量  TODO
  * @Autor: jixuelian
  * @Date: 2019-06-17 14:24:32
@@ -143,7 +143,7 @@
 
 <body>
   <div class="chat-screen">
-    <div class="nav-bar">聊天室</div>
+    <div class="nav-bar">掘金小站聊天室</div>
     <div id="chatBox" class="chat-box">
       <div id="chatContent" class="chat-content">
 
@@ -157,11 +157,51 @@
 </body>
 <script type="text/javascript">
   window.onload = () => {
+    let JJParams = {
+      extensions: {
+        query: {
+          id: "d9997080c3d67a02bfdae094729fed3b"
+        }
+      },
+      operationName: "",
+      query: "",
+      variables: {
+        after: "",
+        first: 3,
+        period: "ALL",
+        type: "ARTICLE"
+      }
+    }
     // 使用到的DOM对象
     let $CC = document.getElementById('chatContent');
     let $UI = document.getElementById('userInput');
     let $CB = document.getElementById('chatBox');
+    /**
+     * @author: jixuelian
+     * @description: XMLHttpRequest实例对象创建请求发送
+     * @param {type} 
+     * @return: 
+     */
+    request = (data, callback) => {
+      let httpRequest = new XMLHttpRequest();
+      httpRequest.open('POST', 'https://web-api.juejin.im/query', true);
+      httpRequest.setRequestHeader('X-Agent', 'Juejin/Web');
+      httpRequest.setRequestHeader('Content-Type', 'application/json');
 
+      httpRequest.send(JSON.stringify(data));
+      // 处理响应的函数
+      httpRequest.onreadystatechange = function (res) {
+        if (httpRequest.readyState === XMLHttpRequest.DONE) {
+          if (callback) callback(JSON.parse(httpRequest.response));
+        }
+      };
+    }
+    JJRequest = (query = 'javascript', callback = () => { }) => {
+      request({ ...JJParams, variables: { ...JJParams.variables, query: query } }, callback)
+    }
+    window.onkeydown = (event) => {
+      if (event.keyCode == "13") sendMsg();
+    }
     /**
      * @author: jixuelian
      * @description: 发送用户语句
@@ -169,8 +209,27 @@
      * @return: 
      */
     sendMsg = () => {
-      if ($UI.value) {
-        addChatLine($UI.value, 'right');
+      let value = $UI.value;
+      if (value) {
+        addChatLine(value, 'right');
+        JJRequest(value, ({ data: { search: { edges = [] } } }) => {
+          if (edges.length) {
+            let linkDom = edges.map((edge, index) => {
+              return `<a href="${edge.node.entity.originalUrl}">${index + 1}. ${edge.node.entity.title}</a>`;
+            })
+            addChatDom(
+              `
+            <div class="chat-line left">
+              <span>
+                找到了关于'${value}'的文章，请品尝：<br />
+                ${linkDom.join('<br />')}</span>
+            </div>
+            `
+            )
+          } else {
+            addChatLine('呀，没找到相关文章，要不换个姿势试试？');
+          }
+        });
         $UI.value = '';
       }
     }
@@ -181,12 +240,17 @@
      * @return: 
      */
     addChatLine = (text, type = 'left') => {
-      $CC.insertAdjacentHTML('beforeend', `<div class="chat-line ${type}"><span>${text}</span></div>`);
+      addChatMsg(`<div class="chat-line ${type}"><span>${text}</span></div>`);
+    }
+    addChatDom = (dom) => {
+      addChatMsg(dom);
+    }
+    addChatMsg = (dom) => {
+      $CC.insertAdjacentHTML('beforeend', dom);
       // 每次输入滚动到最下面
       $CB.scrollTop = $CB.scrollHeight;
     }
     addChatLine('欢迎来到仙人掌的聊天室');
-    addChatLine(' css加载会造成阻塞吗  不可思议的纯 CSS 滚动进度条效果  CSS实现水平垂直居中的1010种方式（史上最全）  rem布局解析  布局的下一次革新  彻底搞懂word-break、word-wrap、white-space  彻底搞懂CSS层叠上下文、层叠等级、层叠顺序、z-index  css加载会造成阻塞吗？  从青铜到王者10个css3伪类使用技巧和运用，了解一哈  CSS性能优化的8个技巧  个人总结（css3新特性）  CSS设置居中的方案总结-超全  Web开发者需要知道的CSS Tricks  CSS 常用技巧  前端工程（架构、软实力）   前端缓存最佳实践  写给前端看的架构文章(1)：MVC VS Flux  前端数据校验从建模开始  前端也需要了解的 JSONP 安全  网站性能优化实战——从12.67s到1.06s的故事  5 分钟撸一个前端性能监控工具  浏览器页面资源加载过程与优化  现代化懒加载的方式  用 preload 预加载页面资源  干货!各种常见布局实现+知名网站实例分析  前端数据结构与算法  前端工程师为什么要学习编译原理？  jsonp的原理与实现  懒加载和预加载  50行代码的MVVM，感受闭包的艺术  不好意思！耽误你的十分钟，让MVVM原理还给你  2018 前端性能优化清单  网页图片加载优化方案  把前端监控做到极致  如何优雅处理前端异常  经典面试题：从 URL 输入到页面展现到底发生什么  前端同构渲染的思考与实践  前端构建秘籍  大型项目前端架构浅谈（8000字原创）  一名【合格】前端工程师的自检清单  React 技术栈  作者：Neal_yang 链接：https://juejin.im/post/5d387f696fb9a07eeb13ea60 来源：掘金 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。');
   };
 </script>
 
