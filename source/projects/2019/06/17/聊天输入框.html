@@ -1,3 +1,12 @@
+<!--
+ * @Description: 实现一个网页版的聊天室
+ * .基本页面样式实现
+ * .每次输入滚动到最下面
+ * .获取网站数据作为回复  TODO
+ * .大量数据时如何控制DOM数量  TODO
+ * @Autor: jixuelian
+ * @Date: 2019-06-17 14:24:32
+ -->
 <!DOCTYPE html>
 <html>
 
@@ -29,10 +38,69 @@
       height: calc(100vh - 120px);
     }
 
+    .chat-box:after {
+      content: 'hello, 盆友';
+      text-align: center;
+      display: block;
+      font-size: 37px;
+      font-weight: 700;
+      font-family: cursive;
+      text-shadow: 5px 3px 5px #0066fe;
+      opacity: 0.1;
+      color: #0a00fe;
+      position: fixed;
+      top: calc(50% - 0.5em);
+      left: calc(50% - 2.5em);
+    }
+
     .chat-content {
       width: 100%;
-      /* position: absolute;
-      bottom: 0; */
+    }
+
+    .chat-line {
+      float: none;
+      padding: 10px;
+    }
+
+    .chat-line.right {
+      text-align: right;
+    }
+
+    .chat-line span {
+      padding: 6px 16px;
+      background: #fff;
+      border-radius: 6px;
+      position: relative;
+      display: inline-block;
+      text-align: left;
+      color: #000;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .chat-line.right span {
+      background: #0066fe;
+      color: #fff;
+    }
+
+    .chat-line span:after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      margin-top: -3px;
+      left: -3px;
+      transform: rotate(45deg);
+      background: #fff;
+    }
+
+    .chat-line.right span:after {
+      content: '';
+      right: -3px;
+      left: auto;
+      background: #0066fe;
     }
 
     .input {
@@ -47,9 +115,18 @@
     input {
       width: 77%;
       border: 1px solid #ddd;
+      padding: 0 10px;
       line-height: 33px;
       border-radius: 100px;
       margin-right: 7px;
+    }
+
+    input:focus {
+      outline-offset: none;
+    }
+
+    :focus {
+      outline: none;
     }
 
     button {
@@ -67,54 +144,50 @@
 <body>
   <div class="chat-screen">
     <div class="nav-bar">聊天室</div>
-    <div class="chat-box">
-      <div class="chat-content">
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwssssss</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
-        <div>wwwwwwwwwwwwwddwwwwwwwww</div>
+    <div id="chatBox" class="chat-box">
+      <div id="chatContent" class="chat-content">
+
       </div>
     </div>
     <div class="input">
-      <input />
-      <button>发送</button>
+      <input id="userInput" />
+      <button id="sendMsg" onclick='sendMsg()'>发送</button>
     </div>
   </div>
 </body>
+<script type="text/javascript">
+  window.onload = () => {
+    // 使用到的DOM对象
+    let $CC = document.getElementById('chatContent');
+    let $UI = document.getElementById('userInput');
+    let $CB = document.getElementById('chatBox');
+
+    /**
+     * @author: jixuelian
+     * @description: 发送用户语句
+     * @param {type} 
+     * @return: 
+     */
+    sendMsg = () => {
+      if ($UI.value) {
+        addChatLine($UI.value, 'right');
+        $UI.value = '';
+      }
+    }
+    /**
+     * @author: jixuelian
+     * @description: 添加语句时的操作
+     * @param {type} 
+     * @return: 
+     */
+    addChatLine = (text, type = 'left') => {
+      $CC.insertAdjacentHTML('beforeend', `<div class="chat-line ${type}"><span>${text}</span></div>`);
+      // 每次输入滚动到最下面
+      $CB.scrollTop = $CB.scrollHeight;
+    }
+    addChatLine('欢迎来到仙人掌的聊天室');
+    addChatLine(' css加载会造成阻塞吗  不可思议的纯 CSS 滚动进度条效果  CSS实现水平垂直居中的1010种方式（史上最全）  rem布局解析  布局的下一次革新  彻底搞懂word-break、word-wrap、white-space  彻底搞懂CSS层叠上下文、层叠等级、层叠顺序、z-index  css加载会造成阻塞吗？  从青铜到王者10个css3伪类使用技巧和运用，了解一哈  CSS性能优化的8个技巧  个人总结（css3新特性）  CSS设置居中的方案总结-超全  Web开发者需要知道的CSS Tricks  CSS 常用技巧  前端工程（架构、软实力）   前端缓存最佳实践  写给前端看的架构文章(1)：MVC VS Flux  前端数据校验从建模开始  前端也需要了解的 JSONP 安全  网站性能优化实战——从12.67s到1.06s的故事  5 分钟撸一个前端性能监控工具  浏览器页面资源加载过程与优化  现代化懒加载的方式  用 preload 预加载页面资源  干货!各种常见布局实现+知名网站实例分析  前端数据结构与算法  前端工程师为什么要学习编译原理？  jsonp的原理与实现  懒加载和预加载  50行代码的MVVM，感受闭包的艺术  不好意思！耽误你的十分钟，让MVVM原理还给你  2018 前端性能优化清单  网页图片加载优化方案  把前端监控做到极致  如何优雅处理前端异常  经典面试题：从 URL 输入到页面展现到底发生什么  前端同构渲染的思考与实践  前端构建秘籍  大型项目前端架构浅谈（8000字原创）  一名【合格】前端工程师的自检清单  React 技术栈  作者：Neal_yang 链接：https://juejin.im/post/5d387f696fb9a07eeb13ea60 来源：掘金 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。');
+  };
+</script>
 
 </html>
